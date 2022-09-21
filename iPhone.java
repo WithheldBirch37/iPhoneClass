@@ -2,6 +2,7 @@ public class iPhone {
     private String call;
     private String text;
     private String photo;
+    private Flag color;
 
     public iPhone() {
         call = "Nobody";
@@ -23,7 +24,16 @@ public class iPhone {
         photo = whatType;
     }
 
-  
+    public iPhone(Flag theFlag){
+       this();
+        color = theFlag;
+    }
+
+    public void conversation(){
+        System.out.println("I'm going to send you a photo of this flag, will you tell me what flag it is?");
+        System.out.println("The flag colors are " + color + " and the " + photo + " you sent me show the flag colors in vertical stripes so it's Belgium. ");
+        System.out.println("Thank you " + text + "! ");
+    }
 
     public void call() {
         System.out.println("You are receiving a call from " + call);
